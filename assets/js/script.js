@@ -1,5 +1,5 @@
 
-	   //JavaScript Cheatsheet
+	   				//JavaScript Cheatsheet
 	   
 //JavaScript Hello World
 console.log("Hello World");
@@ -115,6 +115,63 @@ if (nerdy == true) {
 		for (var i = 0; i < 5; i++) {
 		document.write("I am " + i + "<br>");
 		}
+
+
+					//Advanced JavaScript
+
+//JS Constructors
+function Animal(raining, talk) {
+  this.raining = raining;
+  this.talk = talk;
+  this.startTalking = function() {
+    if (this.raining === true) {
+      document.write(this.talk);
+    }
+  };
+}
+
+
+var dog = {
+    raining: true,
+    talk: "Woof!",
+
+    startTalking: function () {
+        if (this.raining === true) {
+            document.write(this.talk);
+            document.write("<br>");
+        }
+    }
+};
+
+var cat = {
+    raining: "true",
+    talk: "Meow!",
+
+    startTalking: function () {
+        if (this.raining === true) {
+            document.write(this.talk);
+            document.write("<br>");
+        }
+    }
+};
+
+dog.startTalking();
+
+
+// Constructor used to create new objects with properties
+var dogs = new Animal(true, "Woof!");
+var cats = new Animal(false, "Meow!");
+
+// Changing an object's property after creation
+cats.raining = true;
+
+var storm = function(dogs, cats) {
+  if (dogs.raining === true && cats.raining === true) {
+    document.write("Raining Cats and Dogs!");
+  }
+};
+
+storm(dogs, cats);
 
 // Center Test
 document.write("<center>Center<center>");
