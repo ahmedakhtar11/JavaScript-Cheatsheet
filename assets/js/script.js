@@ -1,5 +1,5 @@
 
-	   				//JavaScript Cheatsheet
+	   //JavaScript Cheatsheet
 	   
 //JavaScript Hello World
 console.log("Hello World");
@@ -52,6 +52,16 @@ if (nerdy == true) {
 		
 // Calling Function
 		firstfunction();
+
+// Function Return
+// Using the Return statement to return a value
+function multiply(a, b) {
+	return a * b;
+}
+
+var x = multiply(3, 2); 
+document.write(x);
+document.write("<br>");
 		
 //Variable JSON - JS Object Notation
 		var donor1 = {
@@ -116,62 +126,62 @@ if (nerdy == true) {
 		document.write("I am " + i + "<br>");
 		}
 
+// Center Test
+document.write("<center>Center<center>");
 
-					//Advanced JavaScript
-
-//JS Constructors
-function Animal(raining, talk) {
+	   
+	   // Advanced JavaScript
+	   
+// Constructors
+// Constructors can be used to create objects with properties such as .noise and .raining below:
+function Animal(raining, noise) {
   this.raining = raining;
-  this.talk = talk;
-  this.startTalking = function() {
-    if (this.raining === true) {
-      document.write(this.talk);
-    }
+  this.noise = noise;
+//Methods are functions that are stored as object properties. 
+  this.makeNoise = function() {
+	if (this.raining === true) {
+	  document.write(this.noise);
+	}
   };
 }
 
-
-var dog = {
-    raining: true,
-    talk: "Woof!",
-
-    startTalking: function () {
-        if (this.raining === true) {
-            document.write(this.talk);
-            document.write("<br>");
-        }
-    }
-};
-
-var cat = {
-    raining: "true",
-    talk: "Meow!",
-
-    startTalking: function () {
-        if (this.raining === true) {
-            document.write(this.talk);
-            document.write("<br>");
-        }
-    }
-};
-
-dog.startTalking();
-
-
-// Constructor used to create new objects with properties
+// Settings the variables "dogs" and "cats" to be animal objects and initializing them with the properties of .raining and .noise
 var dogs = new Animal(true, "Woof!");
 var cats = new Animal(false, "Meow!");
 
-// Changing an object's property after creation
-cats.raining = true;
 
-var storm = function(dogs, cats) {
+// Calling the object's method: makeNoise 
+dogs.makeNoise();
+cats.makeNoise();
+document.write("<br>");
+
+// Changing an objects property
+cats.raining = true;
+cats.makeNoise();
+document.write("<br>");
+
+var storm = function (dogs, cats) {
   if (dogs.raining === true && cats.raining === true) {
-    document.write("Raining Cats and Dogs!");
+	document.write("It's Raining Cats and Dogs!");
   }
+   document.write("<br>");
 };
 
 storm(dogs, cats);
 
-// Center Test
-document.write("<center>Center<center>");
+// The Same fuction declaration above can be performed using the arrow function in ES6 syntax instead
+// Remove "Function" Keyword and add an => after calling the function ()
+var storm = (dogs, cats) => {
+  if (dogs.raining === true && cats.raining === true) {
+	document.write("Arrow Function: It's Raining Cats and Dogs!");
+  }
+   document.write("<br>");
+};
+
+storm(dogs, cats);
+
+
+//ES6 Syntax also allows for Template literals, which are a way to output variables in the string, which is pooular in other languages such as Ruby
+var name = 'Ahmed';
+var message = `Welcome ${name}!`;
+document.write(message);
