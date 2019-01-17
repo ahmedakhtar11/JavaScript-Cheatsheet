@@ -1,19 +1,5 @@
 
 	   //JavaScript Cheatsheet
-	   
-//JavaScript Hello World
-console.log("Hello World");
-document.write("Hello World");
-document.write("<br>");
-	
-//String Data Types
-var name = "ahmed"
-document.write(name);
-document.write("<br>");
-	  
-// Integer Data Types
-var age = 28
-document.write(age);
 document.write("<br>");
 
 // Boolean Data Types
@@ -22,15 +8,7 @@ document.write(smart);
 document.write("<br>");
 
 // Double Data Types
-var price = 9.99
-document.write(price);
-document.write("<br>");
-
-//If Else Statements
-const nerdy = true
-
-if (nerdy == true) {
-		document.write("You may Enter")
+ote("You may Enter")
 		document.write("<br>");
 	}
 		else if (nerdy == false) {
@@ -42,7 +20,7 @@ if (nerdy == true) {
 	   document.write("Nevermind!");
 		document.write("<br>");
 		}
-	
+
 	
 // JavaScript Functions
 		function firstfunction() {
