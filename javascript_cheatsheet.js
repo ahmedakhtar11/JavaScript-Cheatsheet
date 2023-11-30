@@ -9,6 +9,21 @@ document.write("<br>" + dash.repeat(20) + "<br>");
 document.write("Hello World");
 // Prints "Hello World"
 document.write("<br>");
+
+// JavaScript has 8 Datatypes
+// 1. String
+// 2. Number
+// 3. Bigint
+// 4. Boolean
+// 5. Undefined
+// 6. Null
+// 7. Symbol
+// 8. Object
+
+//Note:
+// Undefined means the variable has been 
+// declared, but its value has not been assigned.
+// Null means an empty value or a blank value.
 	
 //String Data Types
 var name = "ahmed"
@@ -221,10 +236,31 @@ document.write("<br>");
 document.write(JSON.stringify(donor2));
 document.write("<br>");
 		
-//.Length Method
+//.Length JavaScript Method
 // Prints "# of Hobbies: 3"
 document.write("# of Hobbies: " + donor2.hobbies.length);
 document.write("<br>");
+
+//.Length Method Text
+// Prints 10
+const tenletters = "Tenletters"
+document.write(tenletters.length)
+
+document.write("<br>")
+
+//.Length Method Array
+// Prints 4
+const countarray = [1, 2, 3, 4]
+document.write(array.length)
+
+document.write("<br>")
+
+//.Length Size Method
+// Prints 3
+const letters = new Set(["a","b","c"]);
+document.write(letters.size)
+
+document.write("<br>")
 
 // Sets
 const set1 = new Set([1, 2, 3, 4, 5]);
@@ -262,7 +298,8 @@ document.write("<br>" + "<br>");
 
 const names = ['Jim', 'Joe']
 const [name1, name2] = names
-
+document.write(names)
+document.write("<br>" + "<br>");
 document.write(name1)
 //Returns Jim
 
@@ -1062,7 +1099,6 @@ document.write(largestdoubledigit([1234]))
 // Returns 43 (Largest Possible Number out of String 1234)
 
 
-
 // Returns 4 (Largest Possible Number)
 document.write("<br>" + "Largest Number");
 
@@ -1083,8 +1119,6 @@ for(i=0; i < nums.length; i++) {
 document.write(largest([1,2,3,4]))
 
 
-
-
 function pairs2(arr) {
 	let res = []
 	for(var i=0; i<arr.length; i++) {
@@ -1098,9 +1132,4 @@ function pairs2(arr) {
 document.write(pairs2([1,2,3,4]))
 
 
-
-
 document.write("<br>");
-
-
-
